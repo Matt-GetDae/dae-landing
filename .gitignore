@@ -1,0 +1,17 @@
+# QA screenshots (dev artifacts)
+qa/
+
+# Figma export screenshots (dev artifacts)
+figma-export/
+
+# Dev notes
+REFINEMENT-BRIEF.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
