@@ -243,118 +243,88 @@
           </div>
         </div>
 
-        <!-- RIGHT: Product Visual -->
+        <!-- RIGHT: Pipeline Node Flow Visual -->
         <div class="hero-visual">
           <div class="hero-visual-inner">
-            <!-- Flow pipeline mockup -->
-            <div class="flow-mockup">
-              <div class="flow-mockup-header">
-                <span class="flow-mockup-dot red"></span>
-                <span class="flow-mockup-dot yellow"></span>
-                <span class="flow-mockup-dot green"></span>
-                <span class="flow-mockup-title">Patient Pipeline — Live</span>
-              </div>
-              <div class="flow-mockup-body">
-                <!-- Pipeline columns -->
-                <div class="pipeline-cols">
-                  <div class="pipeline-col">
-                    <div class="pipeline-col-head">New Leads <span class="pipeline-count">12</span></div>
-                    <div class="pipeline-card pipeline-card--animate-1">
-                      <div class="pipeline-card-row">
-                        <span class="pipeline-avatar">SM</span>
-                        <div>
-                          <div class="pipeline-name">Sarah Mitchell</div>
-                          <div class="pipeline-meta">Full Arch · Gold Coast</div>
-                        </div>
-                      </div>
-                      <div class="pipeline-tag tag-new">New</div>
-                    </div>
-                    <div class="pipeline-card pipeline-card--animate-2">
-                      <div class="pipeline-card-row">
-                        <span class="pipeline-avatar">JR</span>
-                        <div>
-                          <div class="pipeline-name">James Reeves</div>
-                          <div class="pipeline-meta">Single Implant · Brisbane</div>
-                        </div>
-                      </div>
-                      <div class="pipeline-tag tag-new">New</div>
-                    </div>
-                  </div>
-                  <div class="pipeline-col">
-                    <div class="pipeline-col-head">Qualified <span class="pipeline-count">8</span></div>
-                    <div class="pipeline-card pipeline-card--animate-3">
-                      <div class="pipeline-card-row">
-                        <span class="pipeline-avatar av-teal">KP</span>
-                        <div>
-                          <div class="pipeline-name">Karen Park</div>
-                          <div class="pipeline-meta">All-on-4 · Melbourne</div>
-                        </div>
-                      </div>
-                      <div class="pipeline-tag tag-qualified">Qualified</div>
-                    </div>
-                    <div class="pipeline-card pipeline-card--animate-4">
-                      <div class="pipeline-card-row">
-                        <span class="pipeline-avatar av-teal">DL</span>
-                        <div>
-                          <div class="pipeline-name">David Liu</div>
-                          <div class="pipeline-meta">Implant Bridge · Sydney</div>
-                        </div>
-                      </div>
-                      <div class="pipeline-tag tag-qualified">Qualified</div>
-                    </div>
-                  </div>
-                  <div class="pipeline-col">
-                    <div class="pipeline-col-head">Booked <span class="pipeline-count">5</span></div>
-                    <div class="pipeline-card pipeline-card--animate-5">
-                      <div class="pipeline-card-row">
-                        <span class="pipeline-avatar av-green">TW</span>
-                        <div>
-                          <div class="pipeline-name">Tina Walsh</div>
-                          <div class="pipeline-meta">Tomorrow, 2:00 PM</div>
-                        </div>
-                      </div>
-                      <div class="pipeline-tag tag-booked"><i data-lucide="check" style="width:10px;height:10px;"></i> Booked</div>
-                    </div>
-                    <div class="pipeline-card pipeline-card--animate-6">
-                      <div class="pipeline-card-row">
-                        <span class="pipeline-avatar av-green">MH</span>
-                        <div>
-                          <div class="pipeline-name">Michael Ho</div>
-                          <div class="pipeline-meta">Thu, 10:30 AM</div>
-                        </div>
-                      </div>
-                      <div class="pipeline-tag tag-booked"><i data-lucide="check" style="width:10px;height:10px;"></i> Booked</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="node-flow">
+              <!-- SVG connection lines -->
+              <svg class="node-flow-lines" viewBox="0 0 520 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#5CF7BB" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#5CF7BB" stop-opacity="0.15"/>
+                  </linearGradient>
+                  <linearGradient id="lineGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#5CF7BB" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#5CF7BB" stop-opacity="0.1"/>
+                  </linearGradient>
+                  <filter id="lineGlow">
+                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                </defs>
+                <!-- Line 1: Ad Traffic (top-left ~110,50) → Screening (center ~325,130) -->
+                <path class="node-line node-line--1" d="M110,55 C180,55 260,130 325,130" stroke="url(#lineGrad1)" stroke-width="2" filter="url(#lineGlow)"/>
+                <!-- Line 2: Screening (center ~325,130) → Qualified (left ~100,230) -->
+                <path class="node-line node-line--2" d="M280,155 C230,175 150,200 100,225" stroke="url(#lineGrad1)" stroke-width="2" filter="url(#lineGlow)"/>
+                <!-- Line 3: Screening (center ~325,130) → Booked (right ~430,230) -->
+                <path class="node-line node-line--3" d="M370,155 C400,175 420,200 435,225" stroke="url(#lineGrad2)" stroke-width="2" filter="url(#lineGlow)"/>
+                <!-- Line 4: Qualified + Booked converge → Revenue (center ~260,340) -->
+                <path class="node-line node-line--4" d="M100,270 C140,310 200,335 260,340" stroke="url(#lineGrad2)" stroke-width="2" filter="url(#lineGlow)"/>
+                <path class="node-line node-line--4b" d="M435,270 C400,310 330,335 260,340" stroke="url(#lineGrad2)" stroke-width="2" filter="url(#lineGlow)" style="animation-delay:2.6s;"/>
+                <!-- Animated pulse dots -->
+                <circle class="pulse-dot pulse-dot--1" r="3" fill="#5CF7BB">
+                  <animateMotion dur="3s" repeatCount="indefinite" path="M110,55 C180,55 260,130 325,130" />
+                </circle>
+                <circle class="pulse-dot pulse-dot--2" r="3" fill="#5CF7BB">
+                  <animateMotion dur="3s" repeatCount="indefinite" path="M280,155 C230,175 150,200 100,225" begin="0.8s" />
+                </circle>
+                <circle class="pulse-dot pulse-dot--3" r="3" fill="#5CF7BB">
+                  <animateMotion dur="3s" repeatCount="indefinite" path="M370,155 C400,175 420,200 435,225" begin="1.6s" />
+                </circle>
+                <circle class="pulse-dot pulse-dot--4" r="3" fill="#5CF7BB">
+                  <animateMotion dur="3.5s" repeatCount="indefinite" path="M100,270 C140,310 200,335 260,340" begin="2.4s" />
+                </circle>
+              </svg>
 
-            <!-- Floating notification cards -->
-            <div class="hero-notif hero-notif--lead">
-              <span class="notif-icon notif-icon--green"><i data-lucide="user-plus" style="width:14px;height:14px;"></i></span>
-              <div>
-                <div class="notif-title">New Implant Lead</div>
-                <div class="notif-detail">Sarah M. — Gold Coast</div>
+              <!-- Node 1: Ad Traffic -->
+              <div class="flow-node flow-node--1">
+                <div class="flow-node-icon"><i data-lucide="megaphone" style="width:18px;height:18px;"></i></div>
+                <div class="flow-node-label">Ad Traffic</div>
+                <div class="flow-node-metric">2,400 <span>visitors</span></div>
+                <div class="flow-node-glow"></div>
               </div>
-              <span class="notif-time">Just now</span>
-            </div>
 
-            <div class="hero-notif hero-notif--booked">
-              <span class="notif-icon notif-icon--teal"><i data-lucide="calendar-check" style="width:14px;height:14px;"></i></span>
-              <div>
-                <div class="notif-title">Consult Booked</div>
-                <div class="notif-detail">Tomorrow 2:00 PM</div>
+              <!-- Node 2: Screening Quiz -->
+              <div class="flow-node flow-node--2">
+                <div class="flow-node-icon"><i data-lucide="clipboard-check" style="width:18px;height:18px;"></i></div>
+                <div class="flow-node-label">Screening Quiz</div>
+                <div class="flow-node-metric">68% <span>completion</span></div>
+                <div class="flow-node-glow"></div>
               </div>
-              <span class="notif-badge">+$4,500</span>
-            </div>
 
-            <!-- Revenue floating card -->
-            <div class="hero-notif hero-notif--revenue">
-              <span class="notif-icon notif-icon--mint"><i data-lucide="trending-up" style="width:14px;height:14px;"></i></span>
-              <div>
-                <div class="notif-title">Monthly Revenue</div>
-                <div class="notif-revenue-value">$85,200</div>
+              <!-- Node 3: Qualified Patients -->
+              <div class="flow-node flow-node--3">
+                <div class="flow-node-icon flow-node-icon--accent"><i data-lucide="shield-check" style="width:18px;height:18px;"></i></div>
+                <div class="flow-node-label">Qualified Patients</div>
+                <div class="flow-node-metric flow-node-metric--accent">47 <span>patients</span></div>
+                <div class="flow-node-glow flow-node-glow--accent"></div>
+              </div>
+
+              <!-- Node 4: Booked Consultations -->
+              <div class="flow-node flow-node--4">
+                <div class="flow-node-icon flow-node-icon--accent"><i data-lucide="calendar-check" style="width:18px;height:18px;"></i></div>
+                <div class="flow-node-label">Booked Consults</div>
+                <div class="flow-node-metric flow-node-metric--accent">19 <span>booked</span></div>
+                <div class="flow-node-glow flow-node-glow--accent"></div>
+              </div>
+
+              <!-- Node 5: Revenue Generated -->
+              <div class="flow-node flow-node--5 flow-node--hero">
+                <div class="flow-node-icon flow-node-icon--revenue"><i data-lucide="trending-up" style="width:20px;height:20px;"></i></div>
+                <div class="flow-node-label">Revenue Generated</div>
+                <div class="flow-node-metric flow-node-metric--revenue">$85K</div>
+                <div class="flow-node-glow flow-node-glow--revenue"></div>
               </div>
             </div>
           </div>
