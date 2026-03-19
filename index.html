@@ -410,100 +410,110 @@
         <h2 class="section-title reveal" style="text-align:center;">Your Patient Acquisition <em>Engine</em></h2>
         <p class="section-subtitle reveal" style="text-align:center;margin-inline:auto;">See exactly how DAE turns ad traffic into pre-qualified implant consultations sitting in your chair — fully automated.</p>
 
-        <div class="flow-engine" id="flowEngine">
-          <!-- Stage 1 -->
-          <div class="flow-stage" data-stage="1">
-            <div class="flow-stage-icon"><i data-lucide="globe"></i></div>
-            <div class="flow-stage-content">
-              <h3>Ad Traffic</h3>
-              <p>Targeted implant campaigns</p>
+        <!-- System Architecture Diagram -->
+        <div class="system-arch" id="flowEngine">
+          <!-- Top row: Input stages -->
+          <div class="system-row system-row--inputs">
+            <div class="system-card system-card--input" data-stage="1">
+              <div class="system-card-icon"><i data-lucide="megaphone" style="width:20px;height:20px;"></i></div>
+              <div class="system-card-body">
+                <h3>Ad Campaigns</h3>
+                <p>Targeted implant ads across Google, Meta &amp; Instagram reaching high-intent patients.</p>
+              </div>
+              <div class="system-card-stat">2,400+ <span>visitors/mo</span></div>
             </div>
-            <div class="flow-stage-metric">2,400+ <span>monthly impressions</span></div>
-          </div>
-
-          <div class="flow-connector">
-            <div class="flow-line"></div>
-            <div class="flow-particle"></div>
-            <div class="flow-particle flow-particle--delayed"></div>
-          </div>
-
-          <!-- Stage 2 -->
-          <div class="flow-stage" data-stage="2">
-            <div class="flow-stage-icon"><i data-lucide="file-check"></i></div>
-            <div class="flow-stage-content">
-              <h3>Assessment Quiz</h3>
-              <p>Self-qualification screening</p>
+            <div class="system-card system-card--input" data-stage="2">
+              <div class="system-card-icon"><i data-lucide="clipboard-check" style="width:20px;height:20px;"></i></div>
+              <div class="system-card-body">
+                <h3>Screening Quiz</h3>
+                <p>Patients self-qualify through a clinical assessment — budget, timeline, suitability.</p>
+              </div>
+              <div class="system-card-stat">68% <span>completion</span></div>
             </div>
-            <div class="flow-stage-metric">68% <span>completion rate</span></div>
           </div>
 
-          <div class="flow-connector">
-            <div class="flow-line"></div>
-            <div class="flow-particle"></div>
-            <div class="flow-particle flow-particle--delayed"></div>
+          <!-- Converge arrows -->
+          <div class="system-converge">
+            <svg class="system-arrow system-arrow--left" viewBox="0 0 120 40" fill="none">
+              <path d="M60,0 L60,32 M54,26 L60,34 L66,26" stroke="#5CF7BB" stroke-width="1.5" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="system-arrow system-arrow--right" viewBox="0 0 120 40" fill="none">
+              <path d="M60,0 L60,32 M54,26 L60,34 L66,26" stroke="#5CF7BB" stroke-width="1.5" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
 
-          <!-- Stage 3 -->
-          <div class="flow-stage" data-stage="3">
-            <div class="flow-stage-icon"><i data-lucide="user-check"></i></div>
-            <div class="flow-stage-content">
-              <h3>Qualified Patients</h3>
-              <p>Pre-screened &amp; treatment-ready</p>
+          <!-- Center: The Engine -->
+          <div class="system-hub">
+            <div class="system-hub-glow"></div>
+            <div class="system-hub-card">
+              <div class="system-hub-badge">
+                <span class="system-hub-dot"></span>
+                Processing
+              </div>
+              <div class="system-hub-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <circle cx="16" cy="16" r="12" stroke="#5CF7BB" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4">
+                    <animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="12s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="16" cy="16" r="6" stroke="#5CF7BB" stroke-width="1.5" opacity="0.8"/>
+                  <circle cx="16" cy="16" r="2.5" fill="#5CF7BB"/>
+                </svg>
+              </div>
+              <h3>DAE Engine</h3>
+              <p>AI-powered nurture sequences, automated follow-ups, and intelligent booking logic — running 24/7.</p>
+              <div class="system-hub-stats">
+                <div class="system-hub-stat">
+                  <span class="system-hub-stat-value">47</span>
+                  <span class="system-hub-stat-label">Qualified</span>
+                </div>
+                <div class="system-hub-stat-divider"></div>
+                <div class="system-hub-stat">
+                  <span class="system-hub-stat-value">92%</span>
+                  <span class="system-hub-stat-label">Show rate</span>
+                </div>
+                <div class="system-hub-stat-divider"></div>
+                <div class="system-hub-stat">
+                  <span class="system-hub-stat-value">24/7</span>
+                  <span class="system-hub-stat-label">Active</span>
+                </div>
+              </div>
             </div>
-            <div class="flow-stage-metric">47 <span>this month</span></div>
           </div>
 
-          <div class="flow-connector">
-            <div class="flow-line"></div>
-            <div class="flow-particle"></div>
-            <div class="flow-particle flow-particle--delayed"></div>
+          <!-- Diverge arrows -->
+          <div class="system-converge">
+            <svg class="system-arrow system-arrow--left" viewBox="0 0 120 40" fill="none">
+              <path d="M60,0 L60,32 M54,26 L60,34 L66,26" stroke="#5CF7BB" stroke-width="1.5" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="system-arrow system-arrow--right" viewBox="0 0 120 40" fill="none">
+              <path d="M60,0 L60,32 M54,26 L60,34 L66,26" stroke="#5CF7BB" stroke-width="1.5" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
 
-          <!-- Stage 4 -->
-          <div class="flow-stage" data-stage="4">
-            <div class="flow-stage-icon"><i data-lucide="calendar-check"></i></div>
-            <div class="flow-stage-content">
-              <h3>Consultation Booked</h3>
-              <p>Auto-booked into your calendar</p>
+          <!-- Bottom row: Output stages -->
+          <div class="system-row system-row--outputs">
+            <div class="system-card system-card--output" data-stage="3">
+              <div class="system-card-icon"><i data-lucide="calendar-check" style="width:20px;height:20px;"></i></div>
+              <div class="system-card-body">
+                <h3>Booked Consults</h3>
+                <p>Pre-qualified patients auto-booked into your calendar. No phone tag.</p>
+              </div>
+              <div class="system-card-stat system-card-stat--accent">19 <span>this month</span></div>
             </div>
-            <div class="flow-stage-metric">19 <span>booked this month</span></div>
-          </div>
-
-          <div class="flow-connector">
-            <div class="flow-line"></div>
-            <div class="flow-particle"></div>
-            <div class="flow-particle flow-particle--delayed"></div>
-          </div>
-
-          <!-- Stage 5 (Final) -->
-          <div class="flow-stage flow-stage--final" data-stage="5">
-            <div class="flow-stage-icon"><i data-lucide="trending-up"></i></div>
-            <div class="flow-stage-content">
-              <h3>Implant Revenue</h3>
-              <p>Case accepted, patient treated</p>
+            <div class="system-card system-card--output system-card--revenue" data-stage="4">
+              <div class="system-card-icon"><i data-lucide="trending-up" style="width:20px;height:20px;"></i></div>
+              <div class="system-card-body">
+                <h3>Tracked Revenue</h3>
+                <p>Full attribution from ad click to case acceptance. Know your true ROI.</p>
+              </div>
+              <div class="system-card-stat system-card-stat--accent">$85K+ <span>per month</span></div>
             </div>
-            <div class="flow-stage-metric">$85K+ <span>revenue attributed</span></div>
-          </div>
-        </div>
-
-        <!-- Floating mini patient cards -->
-        <div class="flow-patients" id="flowPatients">
-          <div class="flow-patient-card" data-position="1">
-            <span class="flow-patient-dot"></span>
-            <span>Sarah M. — Quiz Complete</span>
-          </div>
-          <div class="flow-patient-card" data-position="2">
-            <span class="flow-patient-dot green"></span>
-            <span>James K. — Consult Booked</span>
-          </div>
-          <div class="flow-patient-card" data-position="3">
-            <span class="flow-patient-dot gold"></span>
-            <span>Dr. Williams — $8,500 Case</span>
           </div>
         </div>
       </div>
     </section>
 
+    <hr class="gradient-divider--from-navy" aria-hidden="true">
 
     <!-- ========== 8. DASHBOARD + CALCULATOR (Merged) ========== -->
     <section class="dash-calc-section" id="calculator">
@@ -658,7 +668,7 @@
       <div class="container">
         <div class="founding-content">
           <div class="founding-text reveal">
-            <div class="section-label" style="color:var(--color-primary);">Limited Availability</div>
+            <div class="section-label" style="color:var(--color-mint);">Limited Availability</div>
             <h2 class="section-title" style="color:#fff;">Founding Clinics <em>Program</em></h2>
             <p class="founding-desc">Dental Appointment Engine is currently onboarding a limited number of cosmetic and implant-focused clinics to launch the platform. Founding clinics will help shape the system and receive priority access to new features.</p>
           </div>
@@ -757,7 +767,7 @@
     <section class="cta-section" id="cta">
       <div class="container">
         <div class="cta-content reveal">
-          <div class="section-label" style="color:var(--color-primary);justify-content:center;">Get Started</div>
+          <div class="section-label" style="color:var(--color-mint);justify-content:center;">Get Started</div>
           <h2 class="section-title">Turn Implant Marketing Into A <em>Predictable</em> Patient Acquisition System</h2>
           <p class="section-subtitle">Stop chasing leads. Start seeing pre-qualified implant patients book themselves into your calendar — and track every dollar from ad to case.</p>
           <div class="cta-actions">
@@ -966,39 +976,19 @@
       bulletObserver.observe(whyList);
     }
 
-    // ── Flow Engine — Staggered reveal with particles ──
+    // ── System Architecture — Staggered reveal ──
     const flowEngine = document.getElementById('flowEngine');
     if (flowEngine) {
       const flowObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const section = entry.target.closest('.flow-engine-section');
-            if (section) section.classList.add('flow-active');
-
-            const stages = flowEngine.querySelectorAll('.flow-stage');
-            const connectors = flowEngine.querySelectorAll('.flow-connector');
-
-            stages.forEach((stage, i) => {
-              const stageNum = parseInt(stage.dataset.stage) || (i + 1);
+            const cards = flowEngine.querySelectorAll('.system-card');
+            cards.forEach((card, i) => {
+              const stageNum = parseInt(card.dataset.stage) || (i + 1);
               setTimeout(() => {
-                stage.classList.add('visible');
-              }, stageNum * 300);
+                card.classList.add('visible');
+              }, stageNum * 250);
             });
-
-            connectors.forEach((connector, i) => {
-              setTimeout(() => {
-                connector.classList.add('visible');
-              }, (i + 1) * 300 + 200);
-            });
-
-            // Show patient cards after all stages
-            const patients = document.getElementById('flowPatients');
-            if (patients) {
-              setTimeout(() => {
-                patients.classList.add('visible');
-              }, stages.length * 300 + 400);
-            }
-
             flowObserver.unobserve(entry.target);
           }
         });
