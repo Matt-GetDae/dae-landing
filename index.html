@@ -197,136 +197,95 @@
 
   <main>
 
-    <!-- ========== 1. HERO — Premium Dark SaaS Split Layout ========== -->
+    <!-- ========== 1. HERO — Centered Premium SaaS ========== -->
     <section class="hero" id="solution">
       <div class="hero-bg"></div>
       <div class="hero-glow"></div>
 
-      <div class="hero-split">
-        <!-- LEFT: Copy -->
-        <div class="hero-copy">
-          <div class="hero-eyebrow">
-            <i data-lucide="shield-check" style="width:14px;height:14px;"></i>
-            Built Exclusively for Implant Clinics
-          </div>
-
-          <h1 class="hero-headline">
-            High-Value Implant Patients
-            <span class="hero-highlight">Booked Into Your Calendar.</span>
-            Automatically.
-          </h1>
-
-          <p class="hero-sub">
-            DAE pre-qualifies implant patients through intelligent screening, nurtures them with automated follow-up, and books treatment-ready consultations directly into your calendar — no chasing, no admin, no wasted chair time.
-          </p>
-
-          <div class="hero-cta-row">
-            <a href="#cta" class="btn btn-accent btn-large">Book a Demo <i data-lucide="arrow-right" class="btn-icon"></i></a>
-            <a href="#flow-engine" class="btn btn-ghost btn-large">See How It Works</a>
-          </div>
-
-          <p class="hero-microcopy">Limited onboarding for implant-focused clinics</p>
-
-          <div class="hero-trust-row">
-            <div class="trust-badge">
-              <div class="trust-badge-icon"><i data-lucide="calendar-check"></i></div>
-              <div class="trust-badge-text"><strong>250+ Consultations</strong>Booked &amp; attended</div>
-            </div>
-            <div class="trust-badge">
-              <div class="trust-badge-icon"><i data-lucide="shield-check"></i></div>
-              <div class="trust-badge-text"><strong>Pre-Qualified Patients</strong>Screened before booking</div>
-            </div>
-            <div class="trust-badge">
-              <div class="trust-badge-icon"><i data-lucide="bar-chart-3"></i></div>
-              <div class="trust-badge-text"><strong>Full ROI Visibility</strong>Track every dollar</div>
-            </div>
-          </div>
+      <div class="hero-center">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          Patient Acquisition System
         </div>
 
-        <!-- RIGHT: Pipeline Node Flow Visual -->
-        <div class="hero-visual">
-          <div class="hero-visual-inner">
-            <div class="node-flow">
-              <!-- SVG connection lines -->
-              <svg class="node-flow-lines" viewBox="0 0 520 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                  <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#5CF7BB" stop-opacity="0.5"/>
-                    <stop offset="100%" stop-color="#5CF7BB" stop-opacity="0.15"/>
-                  </linearGradient>
-                  <linearGradient id="lineGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#5CF7BB" stop-opacity="0.4"/>
-                    <stop offset="100%" stop-color="#5CF7BB" stop-opacity="0.1"/>
-                  </linearGradient>
-                  <filter id="lineGlow">
-                    <feGaussianBlur stdDeviation="3" result="blur"/>
-                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                  </filter>
-                </defs>
-                <!-- Line 1: Ad Traffic (top-left ~110,50) → Screening (center ~325,130) -->
-                <path class="node-line node-line--1" d="M110,55 C180,55 260,130 325,130" stroke="url(#lineGrad1)" stroke-width="2" filter="url(#lineGlow)"/>
-                <!-- Line 2: Screening (center ~325,130) → Qualified (left ~100,230) -->
-                <path class="node-line node-line--2" d="M280,155 C230,175 150,200 100,225" stroke="url(#lineGrad1)" stroke-width="2" filter="url(#lineGlow)"/>
-                <!-- Line 3: Screening (center ~325,130) → Booked (right ~430,230) -->
-                <path class="node-line node-line--3" d="M370,155 C400,175 420,200 435,225" stroke="url(#lineGrad2)" stroke-width="2" filter="url(#lineGlow)"/>
-                <!-- Line 4: Qualified + Booked converge → Revenue (center ~260,340) -->
-                <path class="node-line node-line--4" d="M100,270 C140,310 200,335 260,340" stroke="url(#lineGrad2)" stroke-width="2" filter="url(#lineGlow)"/>
-                <path class="node-line node-line--4b" d="M435,270 C400,310 330,335 260,340" stroke="url(#lineGrad2)" stroke-width="2" filter="url(#lineGlow)" style="animation-delay:2.6s;"/>
-                <!-- Animated pulse dots -->
-                <circle class="pulse-dot pulse-dot--1" r="3" fill="#5CF7BB">
-                  <animateMotion dur="3s" repeatCount="indefinite" path="M110,55 C180,55 260,130 325,130" />
-                </circle>
-                <circle class="pulse-dot pulse-dot--2" r="3" fill="#5CF7BB">
-                  <animateMotion dur="3s" repeatCount="indefinite" path="M280,155 C230,175 150,200 100,225" begin="0.8s" />
-                </circle>
-                <circle class="pulse-dot pulse-dot--3" r="3" fill="#5CF7BB">
-                  <animateMotion dur="3s" repeatCount="indefinite" path="M370,155 C400,175 420,200 435,225" begin="1.6s" />
-                </circle>
-                <circle class="pulse-dot pulse-dot--4" r="3" fill="#5CF7BB">
-                  <animateMotion dur="3.5s" repeatCount="indefinite" path="M100,270 C140,310 200,335 260,340" begin="2.4s" />
-                </circle>
-              </svg>
+        <h1 class="hero-headline">
+          Turn Ad Spend Into<br>
+          <span class="hero-highlight">Booked Implant Revenue</span>
+        </h1>
 
-              <!-- Node 1: Ad Traffic -->
-              <div class="flow-node flow-node--1">
-                <div class="flow-node-icon"><i data-lucide="megaphone" style="width:18px;height:18px;"></i></div>
-                <div class="flow-node-label">Ad Traffic</div>
-                <div class="flow-node-metric">2,400 <span>visitors</span></div>
-                <div class="flow-node-glow"></div>
-              </div>
+        <p class="hero-sub">
+          DAE screens, qualifies, and books implant patients directly into your calendar. No chasing leads. No wasted chair time. Just treatment-ready consultations.
+        </p>
 
-              <!-- Node 2: Screening Quiz -->
-              <div class="flow-node flow-node--2">
-                <div class="flow-node-icon"><i data-lucide="clipboard-check" style="width:18px;height:18px;"></i></div>
-                <div class="flow-node-label">Screening Quiz</div>
-                <div class="flow-node-metric">68% <span>completion</span></div>
-                <div class="flow-node-glow"></div>
-              </div>
+        <div class="hero-cta-row">
+          <a href="#cta" class="btn btn-accent btn-large">Book a Demo <i data-lucide="arrow-right" class="btn-icon"></i></a>
+          <a href="#flow-engine" class="btn btn-ghost btn-large">See How It Works</a>
+        </div>
 
-              <!-- Node 3: Qualified Patients -->
-              <div class="flow-node flow-node--3">
-                <div class="flow-node-icon flow-node-icon--accent"><i data-lucide="shield-check" style="width:18px;height:18px;"></i></div>
-                <div class="flow-node-label">Qualified Patients</div>
-                <div class="flow-node-metric flow-node-metric--accent">47 <span>patients</span></div>
-                <div class="flow-node-glow flow-node-glow--accent"></div>
-              </div>
+        <p class="hero-microcopy">Limited onboarding for implant-focused clinics</p>
+      </div>
 
-              <!-- Node 4: Booked Consultations -->
-              <div class="flow-node flow-node--4">
-                <div class="flow-node-icon flow-node-icon--accent"><i data-lucide="calendar-check" style="width:18px;height:18px;"></i></div>
-                <div class="flow-node-label">Booked Consults</div>
-                <div class="flow-node-metric flow-node-metric--accent">19 <span>booked</span></div>
-                <div class="flow-node-glow flow-node-glow--accent"></div>
-              </div>
+      <!-- Full-width live pipeline visualization -->
+      <div class="hero-pipeline">
+        <div class="pipeline-strip">
+          <!-- Stage 1 -->
+          <div class="pipeline-stage pipeline-stage--1">
+            <div class="pipeline-stage-icon"><i data-lucide="megaphone" style="width:18px;height:18px;"></i></div>
+            <div class="pipeline-stage-label">Ad Traffic</div>
+            <div class="pipeline-stage-metric">2,400</div>
+            <div class="pipeline-stage-unit">visitors/mo</div>
+          </div>
 
-              <!-- Node 5: Revenue Generated -->
-              <div class="flow-node flow-node--5 flow-node--hero">
-                <div class="flow-node-icon flow-node-icon--revenue"><i data-lucide="trending-up" style="width:20px;height:20px;"></i></div>
-                <div class="flow-node-label">Revenue Generated</div>
-                <div class="flow-node-metric flow-node-metric--revenue">$85K</div>
-                <div class="flow-node-glow flow-node-glow--revenue"></div>
-              </div>
-            </div>
+          <div class="pipeline-connector">
+            <svg viewBox="0 0 60 40" fill="none"><path d="M0,20 C20,20 40,20 60,20" stroke="url(#connGrad)" stroke-width="2"/><defs><linearGradient id="connGrad"><stop offset="0%" stop-color="#5CF7BB" stop-opacity="0.4"/><stop offset="100%" stop-color="#5CF7BB" stop-opacity="0.15"/></linearGradient></defs></svg>
+            <span class="connector-dot"></span>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="pipeline-stage pipeline-stage--2">
+            <div class="pipeline-stage-icon"><i data-lucide="clipboard-check" style="width:18px;height:18px;"></i></div>
+            <div class="pipeline-stage-label">Screening</div>
+            <div class="pipeline-stage-metric">68%</div>
+            <div class="pipeline-stage-unit">completion</div>
+          </div>
+
+          <div class="pipeline-connector">
+            <svg viewBox="0 0 60 40" fill="none"><path d="M0,20 C20,20 40,20 60,20" stroke="url(#connGrad)" stroke-width="2"/></svg>
+            <span class="connector-dot"></span>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="pipeline-stage pipeline-stage--3 pipeline-stage--accent">
+            <div class="pipeline-stage-icon"><i data-lucide="shield-check" style="width:18px;height:18px;"></i></div>
+            <div class="pipeline-stage-label">Qualified</div>
+            <div class="pipeline-stage-metric">47</div>
+            <div class="pipeline-stage-unit">patients</div>
+          </div>
+
+          <div class="pipeline-connector">
+            <svg viewBox="0 0 60 40" fill="none"><path d="M0,20 C20,20 40,20 60,20" stroke="url(#connGrad)" stroke-width="2"/></svg>
+            <span class="connector-dot"></span>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="pipeline-stage pipeline-stage--4 pipeline-stage--accent">
+            <div class="pipeline-stage-icon"><i data-lucide="calendar-check" style="width:18px;height:18px;"></i></div>
+            <div class="pipeline-stage-label">Booked</div>
+            <div class="pipeline-stage-metric">19</div>
+            <div class="pipeline-stage-unit">consults</div>
+          </div>
+
+          <div class="pipeline-connector">
+            <svg viewBox="0 0 60 40" fill="none"><path d="M0,20 C20,20 40,20 60,20" stroke="url(#connGrad)" stroke-width="2"/></svg>
+            <span class="connector-dot"></span>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="pipeline-stage pipeline-stage--5 pipeline-stage--revenue">
+            <div class="pipeline-stage-icon"><i data-lucide="trending-up" style="width:20px;height:20px;"></i></div>
+            <div class="pipeline-stage-label">Revenue</div>
+            <div class="pipeline-stage-metric">$85K</div>
+            <div class="pipeline-stage-unit">per month</div>
           </div>
         </div>
       </div>
